@@ -1,12 +1,9 @@
 // ignore_for_file: depend_on_referenced_packages
 
-import 'dart:io';
-import 'dart:typed_data';
-
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:otm_template/constants/constants.dart';
-import 'package:otm_template/main.dart';
+import 'package:otm_template/init.dart';
 import 'package:otm_template/themes/app_colors.dart';
 
 extension ExtensionList<T> on List<T>? {
@@ -589,9 +586,9 @@ extension WidgetExtension on Widget {
   Widget buildbBorderRadius(
       {Color? color, BorderRadiusGeometry? borderRadius}) {
     return Container(
-        padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
         decoration: BoxDecoration(
-          borderRadius: borderRadius ?? BorderRadius.all(Radius.circular(12)),
+          borderRadius: borderRadius ?? const BorderRadius.all(Radius.circular(12)),
           color: (color ?? Colors.grey).withValues(alpha:0.2),
         ),
         child: this);
@@ -618,7 +615,7 @@ extension WidgetExtension on Widget {
             alignment: Alignment.center,
             children: [
               Padding(
-                padding: EdgeInsets.only(right: 4, top: 4),
+                padding: const EdgeInsets.only(right: 4, top: 4),
                 child: this,
               ),
               Positioned(
@@ -635,7 +632,7 @@ extension WidgetExtension on Widget {
                   alignment: Alignment.center,
                   child: Text(
                     (count ?? 0) > 99 ? "99+" : count.toString(),
-                    style: TextStyle(fontSize: 8, color: Colors.white),
+                    style: const TextStyle(fontSize: 8, color: Colors.white),
                   ),
                 ),
               )
@@ -685,7 +682,7 @@ extension WidgetExtension on Widget {
   Widget withIcon({required Widget icon}) {
     return Row(
       mainAxisSize: MainAxisSize.min,
-      children: [icon, SizedBox(width: 12), this],
+      children: [icon, const SizedBox(width: 12), this],
     );
   }
 

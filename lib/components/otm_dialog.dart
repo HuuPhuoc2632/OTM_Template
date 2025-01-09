@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:otm_template/components/button/otm_button.dart';
 import 'package:otm_template/constants/constants.dart';
+import 'package:otm_template/init.dart';
 import 'package:otm_template/main.dart';
 import 'package:otm_template/router/router.dart';
 import 'package:otm_template/themes/index.dart';
@@ -39,7 +40,7 @@ class OtmDialog {
                       BorderRadius.circular(Constants.borderRadiusCard),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 8,
               ),
               Container(
@@ -92,7 +93,7 @@ class OtmDialog {
                   const SizedBox(height: 8),
                   bottomView ?? const SizedBox(),
                   OtmButton(
-                    textStyle: TextStyle(color: AppColors.green),
+                    textStyle: const TextStyle(color: AppColors.green),
                     isOutline: true,
                     text: "Xác nhận",
                     onPressed: () {
@@ -496,7 +497,7 @@ class OtmDialog {
         return PopScope(
           canPop: false,
           child: _customDialog(
-            child: Center(
+            child: const Center(
               child: CircularProgressIndicator(
                 valueColor: AlwaysStoppedAnimation(Colors.white),
               ),

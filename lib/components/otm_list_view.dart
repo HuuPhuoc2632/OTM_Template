@@ -27,8 +27,8 @@ class OtmListView extends StatelessWidget {
       itemBuilder: (context, index) => children[index],
       separatorBuilder: separatorBuilder ??
           (context, index) => scrollDirection == Axis.vertical
-              ? SizedBox(height: 8)
-              : SizedBox(width: 8),
+              ? const SizedBox(height: 8)
+              : const SizedBox(width: 8),
     );
   }
 }

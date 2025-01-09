@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:otm_template/init.dart';
 import 'package:otm_template/main.dart';
 import 'package:otm_template/screen/defautl.dart';
+import 'package:otm_template/splash.dart';
 
 
 MaterialPageRoute commonNavigateTo(String? routeName, Widget destination) {
@@ -34,7 +36,8 @@ class AppRouter {
     final args = settings.arguments as Map<String, dynamic>?;
     routeName = settings.name;
     switch (settings.name) {
-      
+      case RouteNames.splash:
+        return navigateTo(const Splash());
       default:
         return navigateTo(const Defautl());
     }
