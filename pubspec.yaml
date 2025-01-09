@@ -40,7 +40,7 @@ dependencies:
   easy_debounce: ^2.0.3
   json_annotation: ^4.9.0
   fluttertoast: ^8.2.8
-  loadmore_listview: ^1.0.7
+  # loadmore_listview: ^1.0.7
   measure_size: ^4.0.0
   flutter_screenutil: ^5.9.3
   flutter_secure_storage: ^9.2.2

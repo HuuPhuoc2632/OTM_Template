@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:otm_template/components/itbee_dialog.dart';
+import 'package:otm_template/components/otm_dialog.dart';
 import 'package:otm_template/themes/index.dart';
 
 // ignore: constant_identifier_names
@@ -24,13 +24,13 @@ Map<TypeAlert, Color> TYPER_ALERT_COLOR = {
 Future<dynamic> showAlert(String message,
     {TypeAlert typeAlert = TypeAlert.INFO, bool allowPopup = false}) async {
   if (typeAlert == TypeAlert.ERROR) {
-    return ItbeeDialog.showErrorDialog(content: message);
+    return OtmDialog.showErrorDialog(content: message);
   }
   if (typeAlert == TypeAlert.WARNING) {
-    return ItbeeDialog.showWarningDialog(content: message);
+    return OtmDialog.showWarningDialog(content: message);
   }
   if (typeAlert == TypeAlert.SUCCESS) {
-    return ItbeeDialog.showSuccessDialog(content: message);
+    return OtmDialog.showSuccessDialog(content: message);
   }
   Fluttertoast.showToast(
     msg: message,

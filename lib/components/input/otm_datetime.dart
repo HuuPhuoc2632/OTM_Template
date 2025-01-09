@@ -4,7 +4,7 @@ import 'package:otm_template/utils/extension.dart';
 import 'package:ternav_icons/ternav_icons.dart';
 
 // ignore: must_be_immutable
-class ItbeeDateTime extends StatefulWidget {
+class OtmDateTime extends StatefulWidget {
   TextEditingController? textFieldController;
   String? hintText;
   Widget? suffixIcon;
@@ -17,7 +17,7 @@ class ItbeeDateTime extends StatefulWidget {
   Color? fillColor;
   String? labelText;
   bool isRequired;
-  ItbeeDateTime(
+  OtmDateTime(
       {super.key,
       this.textFieldController,
       this.errorText,
@@ -34,10 +34,10 @@ class ItbeeDateTime extends StatefulWidget {
   }
 
   @override
-  State<ItbeeDateTime> createState() => _ItbeeDateTime();
+  State<OtmDateTime> createState() => _OtmDateTime();
 }
 
-class _ItbeeDateTime extends State<ItbeeDateTime> {
+class _OtmDateTime extends State<OtmDateTime> {
   late final TextEditingController controller;
 
   @override
@@ -75,7 +75,7 @@ class _ItbeeDateTime extends State<ItbeeDateTime> {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () => _selectDate(context),
-      child: ItbeeInput(
+      child: OtmInput(
         textFieldController: controller,
         isRequired: widget.isRequired,
         labelText: widget.labelText,

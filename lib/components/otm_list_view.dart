@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class ItbeeListView extends StatelessWidget {
+class OtmListView extends StatelessWidget {
   final List<Widget> children;
   final bool shrinkwrap;
   final ScrollPhysics? physics;
   final EdgeInsetsGeometry? padding;
   final Axis scrollDirection;
   final Widget Function(BuildContext, int)? separatorBuilder;
-  const ItbeeListView(
+  const OtmListView(
       {super.key,
       required this.children,
       this.shrinkwrap = false,

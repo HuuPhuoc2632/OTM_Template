@@ -7,8 +7,8 @@ import 'package:otm_template/themes/app_colors.dart';
 import 'package:otm_template/utils/extension.dart';
 import 'package:ternav_icons/ternav_icons.dart';
 
-class ItbeeSelectBottomSheet<T> extends StatefulWidget {
-  const ItbeeSelectBottomSheet(
+class OtmSelectBottomSheet<T> extends StatefulWidget {
+  const OtmSelectBottomSheet(
       {super.key,
       required this.onSelected,
       this.itemSelected,
@@ -32,11 +32,11 @@ class ItbeeSelectBottomSheet<T> extends StatefulWidget {
   final bool showIconCheck;
 
   @override
-  State<ItbeeSelectBottomSheet<T>> createState() =>
-      _ItbeeSelectBottomSheetState<T>();
+  State<OtmSelectBottomSheet<T>> createState() =>
+      _OtmSelectBottomSheetState<T>();
 }
 
-class _ItbeeSelectBottomSheetState<T> extends State<ItbeeSelectBottomSheet<T>> {
+class _OtmSelectBottomSheetState<T> extends State<OtmSelectBottomSheet<T>> {
   late List<T>? _listData;
   dynamic itemSelected;
   late TextEditingController _controller;
@@ -110,7 +110,7 @@ class _ItbeeSelectBottomSheetState<T> extends State<ItbeeSelectBottomSheet<T>> {
                   // decoration:
                   //     BoxDecoration(boxShadow: Component.shadow.widgetShadow),
 
-                  child: ItbeeInput(
+                  child: OtmInput(
                       onChanged: (p0) => {
                             setState(() {
                               searchText = p0 ?? "";
@@ -130,7 +130,7 @@ class _ItbeeSelectBottomSheetState<T> extends State<ItbeeSelectBottomSheet<T>> {
               child: Row(
                 children: [
                   Expanded(
-                      child: ItbeeButton(
+                      child: OtmButton(
                           text: widget.textConfirm.tr(),
                           onPressed: () {
                             FocusScope.of(context).unfocus();
@@ -169,9 +169,9 @@ class _ItbeeSelectBottomSheetState<T> extends State<ItbeeSelectBottomSheet<T>> {
           .toList();
     }
     return list == null
-        ? const ItbeeSpinner()
+        ? const OtmSpinner()
         : list.isEmpty
-            ? const ItbeeNoResult()
+            ? const OtmNoResult()
             : ConstrainedBox(
                 constraints: BoxConstraints(
                   minHeight: 35,
@@ -179,7 +179,7 @@ class _ItbeeSelectBottomSheetState<T> extends State<ItbeeSelectBottomSheet<T>> {
                       ? MediaQuery.sizeOf(context).height * .7
                       : MediaQuery.sizeOf(context).height * .3,
                 ),
-                child: ItbeeListView(
+                child: OtmListView(
                   separatorBuilder: (c, i) => SizedBox(
                     height: widget.showIconCheck ? 0 : 8,
                   ),
@@ -202,12 +202,12 @@ class _ItbeeSelectBottomSheetState<T> extends State<ItbeeSelectBottomSheet<T>> {
                                 ),
                                 if (widget.showIconCheck)
                                   widget.isMultiple
-                                      ? ItbeeCheckbox(
+                                      ? OtmCheckbox(
                                           value: (itemSelected as List?)
                                                   ?.contains(item) ??
                                               false,
                                         ).readonly()
-                                      : ItbeeRadio(
+                                      : OtmRadio(
                                           value: itemSelected == item,
                                         ).readonly(),
                               ],

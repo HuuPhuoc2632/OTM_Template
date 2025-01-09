@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:otm_template/themes/index.dart';
+import 'package:otm_template/utils/debounce.dart';
 import 'package:otm_template/utils/extension.dart';
 import 'package:otm_template/utils/formatters/numeric_formatter.dart';
 import 'package:ternav_icons/ternav_icons.dart';
 
 // ignore: must_be_immutable
-class ItbeeInput extends StatefulWidget {
+class OtmInput extends StatefulWidget {
   TextEditingController? textFieldController;
   String? hintText;
   Widget? suffixIcon;
@@ -32,7 +33,7 @@ class ItbeeInput extends StatefulWidget {
   bool autofocus;
   bool isPassword;
   Function()? onClear;
-  ItbeeInput({
+  OtmInput({
     super.key,
     this.textFieldController,
     this.errorText,
@@ -61,10 +62,10 @@ class ItbeeInput extends StatefulWidget {
     this.isPassword = false,
   });
   @override
-  State<ItbeeInput> createState() => ItbeeInputState();
+  State<OtmInput> createState() => OtmInputState();
 }
 
-class ItbeeInputState extends State<ItbeeInput> {
+class OtmInputState extends State<OtmInput> {
   late final TextEditingController _controller;
   bool _isShowPassword = false;
   String text = "";
@@ -186,8 +187,8 @@ class ItbeeInputState extends State<ItbeeInput> {
   }
 }
 
-extension ItbeeInputExtension on ItbeeInput {
-  ItbeeInput get number {
+extension OtmInputExtension on OtmInput {
+  OtmInput get number {
     inputFormatters = <TextInputFormatter>[
       // for below version 2 use this
       FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
@@ -199,7 +200,7 @@ extension ItbeeInputExtension on ItbeeInput {
     return this;
   }
 
-  ItbeeInput get phone {
+  OtmInput get phone {
     inputFormatters = <TextInputFormatter>[
       // for below version 2 use this
       FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
@@ -212,7 +213,7 @@ extension ItbeeInputExtension on ItbeeInput {
     return this;
   }
 
-  ItbeeInput get currency {
+  OtmInput get currency {
     number.suffixIcon =
         const SizedBox(height: 12, width: 12, child: Center(child: Text("đ")));
     return this;

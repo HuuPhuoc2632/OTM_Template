@@ -6,7 +6,7 @@ import 'package:otm_template/themes/app_colors.dart';
 import 'package:otm_template/utils/extension.dart';
 
 // ignore: must_be_immutable
-class ItbeeSelectListTile<T> extends StatelessWidget {
+class OtmSelectListTile<T> extends StatelessWidget {
   @override
   // ignore: overridden_fields
   Key? key;
@@ -26,7 +26,7 @@ class ItbeeSelectListTile<T> extends StatelessWidget {
   Widget Function(BuildContext, dynamic, String)? itemBuilder;
 
   // Color? bacgroid;
-  ItbeeSelectListTile(
+  OtmSelectListTile(
       {super.key,
       required this.data,
       this.leading,
@@ -107,15 +107,15 @@ class ItbeeSelectListTile<T> extends StatelessWidget {
       T? itemSelected}) async {
     FocusScope.of(navKey.currentContext!)
         .requestFocus(FocusNode()); //remove focus
-    await ItbeeDialog.showBottomSheet(
+    await OtmDialog.showBottomSheet(
         context: navKey.currentContext!,
-        content: ItbeeSelectBottomSheet<T>(
+        content: OtmSelectBottomSheet<T>(
             showIconCheck: itemBuilder == null,
             data: list,
             itemBuilder: (c, value, textSearch) {
               return itemBuilder != null
                   ? itemBuilder!(c, value, textSearch)
-                  : ItbeeTextHighlighting(
+                  : OtmTextHighlighting(
                       text: valueToString(value),
                       caseSensitive: false,
                       useRegExp: true,

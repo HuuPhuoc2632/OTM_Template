@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:otm_template/themes/app_colors.dart';
 
-class ItbeeQuantityButton extends StatefulWidget {
+class OtmQuantityButton extends StatefulWidget {
   final VoidCallback onPressAddProductAttribute;
   final VoidCallback onPressRemoveProductAttribute;
   final ValueChanged<String> onChangeProductAttribute;
   final ValueNotifier<int> amountNotifier;
 
-  const ItbeeQuantityButton({
+  const OtmQuantityButton({
     super.key,
     required this.onPressAddProductAttribute,
     required this.onPressRemoveProductAttribute,
@@ -17,10 +17,10 @@ class ItbeeQuantityButton extends StatefulWidget {
 
   @override
   // ignore: library_private_types_in_public_api
-  _ItbeeQuantityButtonState createState() => _ItbeeQuantityButtonState();
+  _OtmQuantityButtonState createState() => _OtmQuantityButtonState();
 }
 
-class _ItbeeQuantityButtonState extends State<ItbeeQuantityButton> {
+class _OtmQuantityButtonState extends State<OtmQuantityButton> {
   late TextEditingController _controller;
 
   @override

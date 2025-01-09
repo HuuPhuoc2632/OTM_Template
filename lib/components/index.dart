@@ -5,17 +5,17 @@ import 'package:otm_template/utils/extension.dart';
 
 export 'button/index.dart';
 export 'input/index.dart';
-export 'itbee_dialog.dart';
-export 'itbee_list_view.dart';
-export 'itbee_no_result.dart';
-export 'itbee_quantity_button.dart';
-export 'itbee_spinner.dart';
-export 'itbee_text_hightlight.dart';
+export 'otm_quantity_button.dart';
+export 'otm_spinner.dart';
+export 'otm_text_hightlight.dart';
+export 'otm_dialog.dart';
+export 'otm_list_view.dart';
+export 'otm_no_result.dart';
 export 'select/index.dart';
 export 'selection/index.dart';
 
-class ItbeeCardTitle extends StatelessWidget {
-  const ItbeeCardTitle({
+class otmCardTitle extends StatelessWidget {
+  const otmCardTitle({
     super.key,
     required this.title,
     this.toUpperCase,

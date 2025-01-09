@@ -1,14 +1,14 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:otm_template/components/button/itbee_button.dart';
+import 'package:otm_template/components/button/otm_button.dart';
 import 'package:otm_template/constants/constants.dart';
 import 'package:otm_template/main.dart';
 import 'package:otm_template/router/router.dart';
 import 'package:otm_template/themes/index.dart';
 import 'package:otm_template/utils/extension.dart';
 
-class ItbeeDialog {
+class OtmDialog {
   static bool isShowDialog = false;
 
   static Future<T?> showBottomSheet<T>({
@@ -91,7 +91,7 @@ class ItbeeDialog {
                   ),
                   const SizedBox(height: 8),
                   bottomView ?? const SizedBox(),
-                  ItbeeButton(
+                  OtmButton(
                     textStyle: TextStyle(color: AppColors.green),
                     isOutline: true,
                     text: "Xác nhận",
@@ -146,7 +146,7 @@ class ItbeeDialog {
                     ),
                     const SizedBox(height: 8),
                     bottomView ?? const SizedBox(),
-                    ItbeeButton(
+                    OtmButton(
                       // color: Colors.red,
                       isOutline: true,
                       text: "Xác nhận",
@@ -202,7 +202,7 @@ class ItbeeDialog {
                     ),
                     const SizedBox(height: 8),
                     bottomView ?? const SizedBox(),
-                    ItbeeButton(
+                    OtmButton(
                       // color: Colors.red,
                       isOutline: true,
                       text: "Xác nhận",
@@ -259,7 +259,7 @@ class ItbeeDialog {
                     ),
                     const SizedBox(height: 8),
                     bottomView ?? const SizedBox(),
-                    ItbeeButton(
+                    OtmButton(
                       isOutline: true,
                       text: "Thử lại",
                       onPressed: () {
@@ -313,7 +313,7 @@ class ItbeeDialog {
                     ),
                     const SizedBox(height: 8),
                     bottomView ?? const SizedBox(),
-                    ItbeeButton(
+                    OtmButton(
                       isOutline: true,
                       text: "Xác nhận",
                       onPressed: () {
@@ -343,7 +343,7 @@ class ItbeeDialog {
     var actions = [
       if (!isRequire) ...[
         Expanded(
-          child: ItbeeButton(
+          child: OtmButton(
             isOutline: true,
             text: "Hủy",
             onPressed: () {
@@ -357,7 +357,7 @@ class ItbeeDialog {
         const SizedBox(width: 16),
       ],
       Expanded(
-        child: ItbeeButton(
+        child: OtmButton(
           text: "Xác nhận",
           onPressed: () {
             Navigator.of(navKey.currentContext!).pop();
@@ -423,7 +423,7 @@ class ItbeeDialog {
     var actions = [
       if (isRequire) ...[
         Expanded(
-          child: ItbeeButton(
+          child: OtmButton(
             isOutline: true,
             text: "Hủy",
             onPressed: () {
@@ -434,7 +434,7 @@ class ItbeeDialog {
         const SizedBox(width: 16),
       ],
       Expanded(
-        child: ItbeeButton(
+        child: OtmButton(
           text: "Xác nhận",
           onPressed: () {
             Navigator.of(navKey.currentContext!).pop();

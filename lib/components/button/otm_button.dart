@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:otm_template/themes/app_colors.dart';
-class ItbeeButton extends StatelessWidget {
+class OtmButton extends StatelessWidget {
   String text;
   VoidCallback? onPressed;
   double? height;
@@ -16,7 +16,7 @@ class ItbeeButton extends StatelessWidget {
   Decoration? decoration;
   Widget? iconImage;
   Widget? child;
-  ItbeeButton(
+  OtmButton(
       {super.key, required this.text,
       this.onPressed,
       this.height,
@@ -139,10 +139,10 @@ class ItbeeButton extends StatelessWidget {
   }
 }
 
-class ItbeeIconButton extends StatelessWidget {
+class otmIconButton extends StatelessWidget {
   final void Function()? onPressed;
   final Icon? icon;
-  const ItbeeIconButton({super.key, this.onPressed, this.icon});
+  const otmIconButton({super.key, this.onPressed, this.icon});
 
   @override
   Widget build(BuildContext context) {

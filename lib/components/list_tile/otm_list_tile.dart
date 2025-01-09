@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ternav_icons/ternav_icons.dart';
 
-class ItbeeListTile extends StatelessWidget {
-  const ItbeeListTile({
+class OtmListTile extends StatelessWidget {
+  const OtmListTile({
     super.key,
     this.isShowForwordArrow = true,
     required this.title,
@@ -27,7 +27,7 @@ class ItbeeListTile extends StatelessWidget {
     //   child: Row(
     //     mainAxisAlignment: MainAxisAlignment.start,
     //     children: [
-    //       ItbeeIconButton(
+    //       otmIconButton(
     //         icon: leading,
     //       ),
     //       title,
@@ -36,8 +36,8 @@ class ItbeeListTile extends StatelessWidget {
     //   ),
     // );
     return ListTile(
-      visualDensity: VisualDensity(horizontal: 0, vertical: -2),
-      titleTextStyle: TextStyle(
+      visualDensity: const VisualDensity(horizontal: 0, vertical: -2),
+      titleTextStyle: const TextStyle(
         color: Colors.black,
       ),
       minLeadingWidth: minLeadingWidth,

@@ -6,7 +6,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:otm_template/utils/extension.dart';
 
-class ItbeeTextHighlighting extends StatelessWidget {
+class OtmTextHighlighting extends StatelessWidget {
   final String text;
   final String? textSearch;
   final Color? color;
@@ -25,7 +25,7 @@ class ItbeeTextHighlighting extends StatelessWidget {
   final bool isFeed;
   final bool useRegExp;
 
-  const ItbeeTextHighlighting({
+  const OtmTextHighlighting({
     super.key,
     required this.text,
     this.textSearch,

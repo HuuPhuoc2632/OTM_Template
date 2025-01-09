@@ -2,13 +2,13 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:otm_template/themes/index.dart';
 
-class ItbeeNoResult extends StatelessWidget {
+class OtmNoResult extends StatelessWidget {
   final String text;
   final bool? isEnableScroll;
   final Widget? emptyImageWidget;
   final TextStyle? textStyle;
   final Color? color;
-  const ItbeeNoResult({
+  const OtmNoResult({
     super.key,
     this.text = "Not found",
     this.isEnableScroll = true,

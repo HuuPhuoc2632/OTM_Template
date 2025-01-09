@@ -54,7 +54,7 @@ class _SearchDialogState extends State<SearchDialog> {
                   const SizedBox(height: 8),
                   SizedBox(
                     height: 35,
-                    child: ItbeeInput(
+                    child: OtmInput(
                       autofocus: true,
                       textInputAction: TextInputAction.search,
                       inputBorder: OutlineInputBorder(

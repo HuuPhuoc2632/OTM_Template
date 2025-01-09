@@ -1,18 +1,20 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
 import 'package:flutter/material.dart';
+import 'package:otm_template/utils/currency_util.dart';
 import 'package:otm_template/utils/debounce.dart';
+import 'package:otm_template/utils/string.dart';
 import 'package:otm_template/utils/uuid.dart';
 import 'package:ternav_icons/ternav_icons.dart';
 
 
 // ignore: must_be_immutable
-class ItbeeTextButton extends StatelessWidget {
+class OtmTextButton extends StatelessWidget {
   final VoidCallback? onPressed;
   final IconData? icon;
   final String text;
   final Color? color;
-  ItbeeTextButton({
+  OtmTextButton({
     super.key,
     this.onPressed,
     this.icon,
@@ -50,7 +52,7 @@ class TextButtonAdd extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
-    return ItbeeTextButton(
+    return OtmTextButton(
       icon: TernavIcons.lightOutline.plus,
       onPressed: onPressed,
       text: "Thêm",

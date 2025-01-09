@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:otm_template/themes/index.dart';
 
-class ItbeeSpinner extends StatelessWidget {
+class OtmSpinner extends StatelessWidget {
   final double? height;
   final double? width;
-  const ItbeeSpinner({super.key, this.height, this.width});
+  const OtmSpinner({super.key, this.height, this.width});
 
   @override
   Widget build(BuildContext context) {

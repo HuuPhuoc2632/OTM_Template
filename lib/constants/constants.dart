@@ -1,10 +1,10 @@
 import 'dart:ui';
 
 class Constants {
-  static String baseUrl = 'https://ctv.itbee-gitlab.com';
+  static String baseUrl = 'https://ctv.otm-gitlab.com';
   static const String baseDomain = 'https://lazu.com.vn';
   static String env = 'DEV';
-  static const String nameApp = 'ITBee Affiliate';
+  static const String nameApp = 'otm Affiliate';
   static const String companyId = "cl5ag44qj00231o2xfhnfpjxf";
   static const urlAboutUs = "https://lazuvietnam.com/gioi-thieu/";
   static const urlSupportCenter = "https://lazuvietnam.com/faq-lazu-viet-nam/";
