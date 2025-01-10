@@ -55,7 +55,8 @@ class _HomeScreenState extends State<HomeScreen> {
         notchSmoothness: NotchSmoothness.smoothEdge,
         inactiveColor: AppColors.whiteColor,
         activeColor: AppColors.warningColor,
-        // leftCornerRadius: 32,
+        notchMargin: 4,
+                // leftCornerRadius: 32,
         // rightCornerRadius: 32,
         onTap: _onTap,
         //other params
