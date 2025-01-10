@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:otm_template/init.dart';
 import 'package:otm_template/main.dart';
 import 'package:otm_template/screen/defautl.dart';
+import 'package:otm_template/screen/home/home_screen.dart';
 import 'package:otm_template/splash.dart';
 
 
@@ -38,6 +39,8 @@ class AppRouter {
     switch (settings.name) {
       case RouteNames.splash:
         return navigateTo(const Splash());
+      case RouteNames.home:
+        return navigateTo(const HomeScreen());
       default:
         return navigateTo(const Defautl());
     }
@@ -46,5 +49,5 @@ class AppRouter {
 
 class RouteNames {
   static const splash = 'splash';
-  static const customerHome = "customer_home";
+  static const home = "home";
 }

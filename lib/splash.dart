@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:otm_template/router/router.dart';
 import 'package:otm_template/utils/extension.dart';
 
 class Splash extends StatefulWidget {
@@ -11,6 +12,10 @@ class Splash extends StatefulWidget {
 class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
+    //delay 2 seconds and navigate to home
+    Future.delayed(const Duration(seconds: 2), () {
+      AppRouter.goPageByName(RouteNames.home);
+    });
     return  Scaffold(
       body: Center(
         child: Column(
