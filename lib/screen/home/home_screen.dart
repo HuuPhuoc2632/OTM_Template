@@ -52,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: AppColors.primaryColor,
         activeIndex: activeIndex,
         gapLocation: GapLocation.center,
-        notchSmoothness: NotchSmoothness.smoothEdge,
+        notchSmoothness: NotchSmoothness.softEdge,
         inactiveColor: AppColors.whiteColor,
         activeColor: AppColors.warningColor,
         notchMargin: 4,
